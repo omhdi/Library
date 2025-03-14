@@ -1,0 +1,2 @@
+generate encryption key 1024 in hexadecimal: 
+openssl rand -hex 128
