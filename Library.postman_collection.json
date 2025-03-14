@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "77d22677-5fb6-400d-bfca-972f3f766e78",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34060815"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "getAllBooks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"The Great Gatsby\",\n    \"author\": \"F. Scott Fitzgerald\",\n    \"publicationYear\": 1926,\n    \"isbn\": \"9780743273565\",\n    \"editionNumber\": 1,\n    \"category\": \"Fiction\",\n    \"city\": \"New York\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"id\": 1,\n            \"title\": \"The Test Gatsby\",\n            \"author\": \"F. st Fitzgerald\",\n            \"publicationYear\": 2025,\n            \"isbn\": \"9780743273787\",\n            \"editionNumber\": 3,\n            \"category\": \"Scince\",\n            \"city\": \"Parick\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/books/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Book CRUD"
+		},
+		{
+			"name": "Patron",
+			"item": [
+				{
+					"name": "getAllPatrons",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/patrons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patrons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPatronById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/patrons/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patrons",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePatron",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Omar mhdi\",\n    \"contactInformation\": \"omar.mhdi@example.com\",\n    \"birthdate\": \"1999-05-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/patrons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patrons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePatron",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Omar mhdii\",\n    \"contactInformation\": \"omar.mhdi@example.com\",\n    \"birthdate\": \"1999-05-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/patrons/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patrons",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePatronById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/patrons/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patrons",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Patron CRUD"
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lastname\":\"mhd\",\n    \"firstname\":\"modr\",\n    \"email\":\"mhdmodr@gmail.com\",\n    \"password\":\"ddD@123\",\n    \"role\":\"USER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/registor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"registor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"omhdi@mtn.com\",\n    \"password\":\"MnT@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Authentication Signup and Login"
+		},
+		{
+			"name": "BorrowAndReturnBook",
+			"item": [
+				{
+					"name": "BorrowBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/borrow/2/patron/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"borrow",
+								"2",
+								"patron",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReturnBook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3NlcnZpY2VzLm1haWRzLmNvbSIsInN1YiI6Im9taGRpQG10bi5jb20iLCJhdWQiOiJodHRwczovL21haWRzLmNvbSIsImlhdCI6MTc0MTkxMzU2OSwiZXhwIjoxNzQxOTE1MDA5fQ.-23r0DyYmd0EgN7UzIqTTlqrcyNDAh5qGldtrz6WuFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/return/2/patron/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"return",
+								"2",
+								"patron",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Borrow book and return book"
+		}
+	]
+}
